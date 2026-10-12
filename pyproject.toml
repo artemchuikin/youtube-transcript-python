@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "transcriptout"
-version = "0.1.0"
+version = "0.1.1"
 description = "Drop-in replacement for youtube-transcript-api that works from servers and clouds. Hosted by TranscriptOut, no proxies to run."
 readme = "README.md"
 license = "MIT"
