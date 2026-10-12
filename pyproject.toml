@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "transcriptout"
+version = "0.1.0"
+description = "Drop-in replacement for youtube-transcript-api that works from servers and clouds. Hosted by TranscriptOut, no proxies to run."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+authors = [{ name = "Artem Chuikin", email = "support@transcriptout.com" }]
+keywords = ["youtube", "transcript", "captions", "subtitles", "youtube-transcript-api", "api"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = ["requests>=2.25"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://transcriptout.com"
+Documentation = "https://transcriptout.com/docs"
+Source = "https://github.com/artemchuikin/youtube-transcript-python"
+Issues = "https://github.com/artemchuikin/youtube-transcript-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/transcriptout"]
