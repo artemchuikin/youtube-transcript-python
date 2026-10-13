@@ -37,7 +37,7 @@ from ._errors import (
 )
 from ._transcripts import FetchedTranscript, FetchedTranscriptSnippet, Transcript, TranscriptList
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 __all__ = [
     "YouTubeTranscriptApi",

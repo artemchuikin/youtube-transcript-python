@@ -21,7 +21,7 @@ from ._errors import (
 )
 
 DEFAULT_BASE_URL = "https://api.transcriptout.com"
-USER_AGENT = "transcriptout-python/0.1.2"
+USER_AGENT = "transcriptout-python/0.1.3"
 
 # Statuses that mean "not now" rather than "no": the service says when to come back in Retry-After.
 # ⚠️ 502 is NOT here. It means the request reached YouTube and failed there, which is charged, so a
