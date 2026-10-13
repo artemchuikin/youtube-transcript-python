@@ -19,10 +19,31 @@ for snippet in transcript:
 
 ```bash
 pip install transcriptout
-export TRANSCRIPTOUT_API_KEY=sk_...
 ```
 
-Get a free key at [transcriptout.com](https://transcriptout.com). New accounts start with free credits, no card.
+## API key
+
+Sign in at [transcriptout.com](https://transcriptout.com) and create a key on the [Keys](https://transcriptout.com/keys) page. It starts with `sk_`. New accounts start with free credits, no card.
+
+The package reads the key from the `TRANSCRIPTOUT_API_KEY` environment variable, so your code stays the same as with youtube-transcript-api. Set it in the terminal you run your code from.
+
+```bash
+# macOS and Linux
+export TRANSCRIPTOUT_API_KEY=sk_your_key
+
+# Windows PowerShell
+$env:TRANSCRIPTOUT_API_KEY="sk_your_key"
+```
+
+That lasts until the terminal is closed. For a project, put the line `TRANSCRIPTOUT_API_KEY=sk_your_key` in a `.env` file and load it with `python-dotenv` (`from dotenv import load_dotenv; load_dotenv()`) before creating the client. On a server, add the variable in your host's settings (Render, Fly, Docker and so on).
+
+Or pass the key in code.
+
+```python
+ytt_api = YouTubeTranscriptApi(api_key="sk_your_key")
+```
+
+Keep the key out of git. An error saying `No API key` means the variable is not set in the process that runs your code.
 
 ## What stays the same
 
