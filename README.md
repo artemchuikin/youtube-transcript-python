@@ -1,6 +1,6 @@
 # transcriptout
 
-`youtube-transcript-api` works on your laptop and breaks in production with `RequestBlocked` or `IpBlocked`, because YouTube blocks cloud IP ranges. `transcriptout` keeps the same interface and fetches through [TranscriptOut](https://transcriptout.com), so there are no proxies to run and nothing to block on your side.
+`youtube-transcript-api` works on your laptop and breaks in production with `RequestBlocked` or `IpBlocked`, because YouTube blocks cloud IP ranges. `transcriptout` keeps the same interface and fetches through [TranscriptOut](https://transcriptout.com/?utm_source=transcriptout-python&utm_medium=readme), so there are no proxies to run and nothing to block on your side.
 
 Migration is one line.
 
@@ -23,7 +23,7 @@ pip install transcriptout
 
 ## API key
 
-Sign in at [transcriptout.com](https://transcriptout.com) and create a key on the [Keys](https://transcriptout.com/keys) page. It starts with `sk_`. New accounts start with free credits, no card.
+Sign in at [transcriptout.com](https://transcriptout.com/?utm_source=transcriptout-python&utm_medium=readme) and create a key on the [Keys](https://transcriptout.com/keys?utm_source=transcriptout-python&utm_medium=readme) page. It starts with `sk_`. New accounts start with free credits, no card.
 
 The package reads the key from the `TRANSCRIPTOUT_API_KEY` environment variable, so your code stays the same as with youtube-transcript-api. Set it in the terminal you run your code from.
 
@@ -137,7 +137,7 @@ Errors from the service itself subclass `TranscriptOutError`, which carries `sta
 
 ## Pricing
 
-One credit per transcript. `fetch` with a language the video lacks costs one more call to list its tracks. Requests refused for reasons on our side are refunded. See [pricing](https://transcriptout.com/#pricing).
+One credit per transcript. `fetch` with a language the video lacks costs one more call to list its tracks. Requests refused for reasons on our side are refunded. See [pricing](https://transcriptout.com/?utm_source=transcriptout-python&utm_medium=readme#pricing).
 
 ## License
 
